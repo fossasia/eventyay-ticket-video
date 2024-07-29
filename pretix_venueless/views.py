@@ -153,11 +153,11 @@ class OrderPositionJoin(EventViewMixin, OrderPositionDetailMixin, View):
             "profile": profile,
             "traits": list(
                 {
-                    'eventyay-video-event-{}'.format(request.event.slug),
-                    'eventyay-video-subevent-{}'.format(self.position.subevent_id),
-                    'eventyay-video-item-{}'.format(self.position.item_id),
-                    'eventyay-video-variation-{}'.format(self.position.variation_id),
-                    'eventyay-video-category-{}'.format(self.position.item.category_id),
+                    'eventyay-ticket-event-{}'.format(request.event.slug),
+                    'eventyay-ticket-subevent-{}'.format(self.position.subevent_id),
+                    'eventyay-ticket-item-{}'.format(self.position.item_id),
+                    'eventyay-ticket-variation-{}'.format(self.position.variation_id),
+                    'eventyay-ticket-category-{}'.format(self.position.item.category_id),
                 } | {
                     'eventyay-video-item-{}'.format(p.item_id)
                     for p in self.position.addons.all()
